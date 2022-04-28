@@ -18,13 +18,6 @@ import {
   FormHelperText,
   Radio,
   RadioGroup,
-  TableContainer,
-  Table,
-  TableHead,
-  TableRow,
-  TableBody,
-  
-  Paper
 } from '@mui/material';
 import './index.css';
 //import TableCell, { tableCellClasses } from '@mui/material/TableCell';
@@ -47,15 +40,12 @@ const PersonalInfo = () => {
   return (
     <>
       <Box
-       
         sx={{
           '& .MuiTextField-root': { m: 1, width: '100ch' },
         }}
-        
         style={{ display: 'flex' }}
       >
         <Box
-          
           sx={{
             '& .MuiTextField-root': { mt: 2, width: '50ch' },
           }}
@@ -202,16 +192,12 @@ const PersonalInfo = () => {
             />
           </div>
         </Box>
-        
       </Box>
     </>
   );
 };
 const AdditionalInfo = () => {
-  const {
-    control,
-    
-  } = useFormContext();
+  const { control } = useFormContext();
   return (
     <>
       <Box
@@ -287,7 +273,7 @@ const AdditionalInfo = () => {
                 <RadioGroup
                   defaultValue=""
                   aria-labelledby="demo-customized-radios"
-                  
+
                   // name="customized-radios"
                 >
                   <FormControlLabel
@@ -297,7 +283,7 @@ const AdditionalInfo = () => {
                     label="Everything"
                     {...field}
                   />
-                  
+
                   <FormControlLabel
                     control={
                       <Radio value="sameAsEmail" defaultValue="sameAsEmail" />
@@ -305,7 +291,7 @@ const AdditionalInfo = () => {
                     label="Same as email"
                     {...field}
                   />
-                  
+
                   <FormControlLabel
                     control={
                       <Radio
@@ -316,7 +302,6 @@ const AdditionalInfo = () => {
                     label="No push notification"
                     {...field}
                   />
-                  
                 </RadioGroup>
               </FormGroup>
             )}
@@ -328,16 +313,17 @@ const AdditionalInfo = () => {
 };
 const Summary = () => {
   // const { control } = useFormContext();
- const onSubmit = (data) => {
-   console.log(data);
- };
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <>
-      <div style={{marginTop:'3rem'}}>
+      <div style={{ marginTop: '3rem' }}>
         <h3>Applicants Information</h3>
-        <small>Get notified when someones posts a comment on a posting</small><br />
-        
-        <table class="table table-striped" style={{marginTop:'20px'}}>
+        <small>Get notified when someones posts a comment on a posting</small>
+        <br />
+
+        <table class="table table-striped" style={{ marginTop: '20px' }}>
           <tbody>
             <tr>
               <td className="first-col">Full Name</td>
@@ -406,7 +392,7 @@ const StepperForm = () => {
       offers: false,
     },
   });
- 
+
   // for Next step
   const handleNext = (data) => {
     console.log(data);
